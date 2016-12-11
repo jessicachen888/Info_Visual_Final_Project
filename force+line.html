@@ -73,7 +73,7 @@ path.area {
   stroke: #000;
 }
 </style>
-<h1 align='center'> Building Spectator</h1>
+<h1 align='center'> Building Inspector</h1>
 <div id="scatterplot">
 </div>
 
@@ -837,6 +837,8 @@ var node = svg.selectAll("node")
         //console.log(d.id);
         var cur_id = d.id;
         
+     if (cur_id !='F1' && cur_id !='F2' && cur_id != 'F3'){
+            
         svg.selectAll(".node").style("fill", function (d) { return fill(d.group);});
         d3.select(".menu").remove();
         
@@ -1023,7 +1025,7 @@ var node = svg.selectAll("node")
             'display':'none'
         });
     });
-
+     }
 });
 
 node.append("circle").attr("r", 10);
